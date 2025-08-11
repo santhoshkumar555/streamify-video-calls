@@ -105,8 +105,8 @@ const App = () => {
           path="/friends"
           element={
             isAuthenticated && isOnboarded ? (
-              <Layout showSidebar={false}>
-                <ChatPage />
+              <Layout showSidebar={true}>
+                <HomePage />
               </Layout>
             ) : (
               <Navigate to={!isAuthenticated ? "/login" : "/onboarding"} />
