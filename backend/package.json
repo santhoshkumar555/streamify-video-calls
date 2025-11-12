@@ -12,6 +12,7 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@aws-sdk/client-s3": "^3.910.0",
     "bcryptjs": "^3.0.2",
     "cookie-parser": "^1.4.7",
     "cors": "^2.8.5",
@@ -19,8 +20,10 @@
     "express": "^4.21.0",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.13.2",
+    "multer": "^2.0.2",
     "stream-chat": "^8.60.0",
-    "streamify": "file:.."
+    "streamify": "file:..",
+    "uuid": "^13.0.0"
   },
   "devDependencies": {
     "nodemon": "^3.1.9"

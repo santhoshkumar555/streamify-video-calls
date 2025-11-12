@@ -7,6 +7,9 @@ import NotificationsPage from "./pages/NotificationsPage.jsx";
 import CallPage from "./pages/CallPage.jsx";
 import ChatPage from "./pages/ChatPage.jsx";
 import OnboardingPage from "./pages/OnboardingPage.jsx";
+import ProfilePage from "./pages/ProfilePage";
+import RecordingPage from "./pages/RecordingPage";
+
 
 import { Toaster } from "react-hot-toast";
 
@@ -113,6 +116,9 @@ const App = () => {
             )
           }
         />
+        <Route path="/record" element={<RecordingPage />} />
+
+        <Route path="/profile" element={<ProfilePage />} />
       </Routes>
 
       <Toaster />
