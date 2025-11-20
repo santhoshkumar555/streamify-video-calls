@@ -60,20 +60,9 @@ const HomePage = () => {
             Friend Requests
           </Link>
         </div>
-        <div className="flex flex-wrap gap-2">
-          <Link to="/record" className="btn btn-primary btn-sm">
-            🎥 Open Recording Page
-          </Link>
-          <a
-            href="https://ai-chat-d651.onrender.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn btn-secondary btn-sm"
-          >
-            <MessageCircle className="mr-2 size-4" />
-            AI Chat Support
-          </a>
-        </div>
+        <Link to="/record" className="btn btn-primary btn-sm">
+          🎥 Open Recording Page
+        </Link>
 
 
         {loadingFriends ? (
@@ -181,6 +170,17 @@ const HomePage = () => {
           )}
         </section>
       </div>
+
+      {/* Floating AI Chat Support Button */}
+      <a
+        href="https://ai-chat-d651.onrender.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-6 right-6 btn btn-circle btn-secondary btn-lg shadow-lg hover:shadow-xl transition-all duration-300 z-50"
+        title="AI Chat Support"
+      >
+        <MessageCircle className="size-6" />
+      </a>
     </div>
   );
 };
