@@ -7,7 +7,7 @@ import {
   sendFriendRequest,
 } from "../lib/api";
 import { Link } from "react-router";
-import { CheckCircleIcon, MapPinIcon, UserPlusIcon, UsersIcon } from "lucide-react";
+import { CheckCircleIcon, MapPinIcon, MessageCircle, UserPlusIcon, UsersIcon } from "lucide-react";
 
 import { capitialize } from "../lib/utils";
 
@@ -60,9 +60,20 @@ const HomePage = () => {
             Friend Requests
           </Link>
         </div>
-        <Link to="/record" className="btn btn-primary btn-sm mt-2 sm:mt-0">
-         🎥 Open Recording Page
-        </Link>
+        <div className="flex flex-wrap gap-2">
+          <Link to="/record" className="btn btn-primary btn-sm">
+            🎥 Open Recording Page
+          </Link>
+          <a
+            href="https://ai-chat-d651.onrender.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-secondary btn-sm"
+          >
+            <MessageCircle className="mr-2 size-4" />
+            AI Chat Support
+          </a>
+        </div>
 
 
         {loadingFriends ? (
@@ -145,9 +156,8 @@ const HomePage = () => {
 
                       {/* Action button */}
                       <button
-                        className={`btn w-full mt-2 ${
-                          hasRequestBeenSent ? "btn-disabled" : "btn-primary"
-                        } `}
+                        className={`btn w-full mt-2 ${hasRequestBeenSent ? "btn-disabled" : "btn-primary"
+                          } `}
                         onClick={() => sendRequestMutation(user._id)}
                         disabled={hasRequestBeenSent || isPending}
                       >
